@@ -5,19 +5,19 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
 const SAMPLES = [
-  ["Raise my prices?", "I run a coaching business doing $30k a month with 15 active clients at $2,000 each. I want to raise the price to $3,500. Options: raise for everyone now, raise for new clients only, or keep $2,000. Close rate is about 50% on sales calls. I'm leaning toward raising for everyone because I'm underpaid."],
-  ["First salesperson?", "I'm a solo founder of a B2B SaaS at $25k MRR growing 5% a month. I do every sales call myself (about 20 hours a week) and I'm burning out. Should I hire a full-time account executive at $120k base, hire a part-time commission-only closer, or keep selling myself for six more months? I have $150k in the bank."],
-  ["Second product?", "My agency makes $80k a month building AI automations for dentists. A few clients asked for an AI receptionist product. Should I build the receptionist as a separate SaaS, offer it as an add-on to existing clients only, or stay focused on the agency? Team of 6, about $200k cash."],
-  ["Quit my job?", "I make $180k a year at a tech company. My side business (a paid newsletter) makes $6k a month and grew 8% a month this year. I have 9 months of expenses saved. Should I quit now, quit in 6 months, or keep both and hire a writer?"],
+  ["Fees badhau?", "Main Pune mein ek coaching business chalata hoon, ₹6 lakh per month, 30 students ₹20,000 each. Fees ₹35,000 karna chahta hoon. Options: sab ke liye abhi badhao, sirf naye students ke liye, ya ₹20,000 hi rakho. Sales calls pe close rate around 50% hai. Bank mein ₹8 lakh hain. Main sab ke liye badhane ki taraf jhuk raha hoon kyunki underpaid feel hota hai."],
+  ["Pehla salesperson?", "Main ek B2B SaaS ka solo founder hoon, ₹12 lakh MRR, 5% monthly growth. Saare sales calls main khud karta hoon (hafte mein 20 ghante) aur burnout ho raha hai. Full-time sales head ₹30 lakh CTC pe rakhu, commission-only freelancer lu, ya 6 mahine aur khud bechu? Bank mein ₹60 lakh hain."],
+  ["VC ka paisa lu?", "Mera D2C snacks brand ₹40 lakh per month karta hai, profitable hai, 70% sales Tier-2 cities se. Ek VC ₹8 crore offer kar raha hai ₹40 crore valuation pe. Paisa lekar quick commerce aur metros mein jaau, ya bootstrapped rehkar Tier-2 mein hi grow karu? Family ka ₹50 lakh ka loan bhi hai."],
+  ["Naukri chhodu?", "Main Bengaluru mein ek product company mein ₹45 lakh per year kamata hoon. Mera side business (YouTube plus paid course) ₹2.5 lakh per month karta hai aur is saal 8% monthly grow hua. 9 mahine ka kharcha saved hai. Abhi naukri chhodu, 6 mahine baad chhodu, ya dono rakhkar ek editor hire karu?"],
 ];
 
-const EXAMPLE = "I run a coaching business at $30k a month with 15 clients at $2,000 each. Should I raise to $3,500 for everyone, raise for new clients only, or keep $2,000? Close rate is about 50% and I have $40k in the bank. Success is $45k a month by March. I'm leaning toward raising for everyone because I'm underpaid.";
+const EXAMPLE = "Main Pune mein coaching business chalata hoon, ₹6 lakh per month, 30 students ₹20,000 each. Fees ₹35,000 karu sab ke liye, sirf naye students ke liye, ya ₹20,000 hi rakhu? Close rate around 50% hai aur bank mein ₹8 lakh hain. Success matlab March tak ₹9 lakh per month. Main sab ke liye badhane ki taraf jhuk raha hoon kyunki underpaid feel hota hai.";
 
 // The how-to, shown in the side panel while the room is empty and in "How it works".
 const GUIDE = `
   <div class="guide">
     <div class="guide-sec">
-      <h4>How to use the Roast Room</h4>
+      <h4>How to use the AI India Roast Room</h4>
       <ol>
         <li><span>Open Claude Code in this folder.</span></li>
         <li><span>Type <code>/roast-room</code> and your decision.</span></li>
@@ -30,7 +30,7 @@ const GUIDE = `
       <ul>
         <li><span><b>The decision</b> in one line.</span></li>
         <li><span><b>Your options.</b> Two or three. "Keep doing what I do now" counts.</span></li>
-        <li><span><b>Your numbers.</b> Revenue, cash, and team size.</span></li>
+        <li><span><b>Your numbers.</b> Revenue (₹ lakh or crore), cash, team size, GST, and which cities you sell in.</span></li>
         <li><span><b>Your limits.</b> Deadline, hours, and budget.</span></li>
         <li><span><b>What success looks like</b>, and by when.</span></li>
         <li><span><b>Which way you're leaning</b>, and why. The council tests it.</span></li>
@@ -509,7 +509,7 @@ function captionFor(who) {
   c.style.animation = "none"; void c.offsetWidth; c.style.animation = "";
   const s = state.byKey[who];
   $("#capAv").className = `cap-av${s ? "" : " chair"}`;
-  $("#capAv").innerHTML = `<img src="${s ? portrait(who) : "/brand/ais-symbol.png"}" alt="">`;
+  $("#capAv").innerHTML = `<img src="${s ? portrait(who) : "/brand/aii-symbol.png"}" alt="">`;
   $("#capWho").textContent = s ? s.name : "The Chair";
 }
 

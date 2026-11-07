@@ -1,0 +1,19 @@
+{
+  "title": "Get married at 25",
+  "decision": "Should a 25-year-old with a partner of 1+ years get married now?",
+  "mode": "quick",
+  "options": [
+    { "id": "A", "label": "Marry now (within ~6 months)" },
+    { "id": "B", "label": "Engage now, marry in 12 to 18 months" },
+    { "id": "C", "label": "Wait 2 to 3 years, then decide" }
+  ],
+  "weights": {
+    "buffett": { "weight": 3, "reason": "Who you marry is the biggest long-term value call" },
+    "bezos": { "weight": 2, "reason": "Close to a one-way door; regret frames timing" },
+    "leila": { "weight": 2, "reason": "Marriage is a partnership two people must lead" },
+    "hormozi": { "weight": 1, "reason": "Career momentum at 25, at the edges" }
+  },
+  "seats": ["buffett", "bezos", "leila", "hormozi"],
+  "brief": "A 25-year-old with a stable job, some savings, and a partner of more than a year is leaning toward marrying now. Options are marry now, get engaged and marry in 12 to 18 months after set checks, or wait 2 to 3 years.",
+  "assumptions": ["Relationship is 1 to 3 years old (assumed)", "Savings cover 3 to 6 months (assumed)", "No outside pressure on timing (assumed)", "No detailed money and life-goals talk yet (assumed)"]
+}

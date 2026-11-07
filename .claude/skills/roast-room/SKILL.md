@@ -1,14 +1,23 @@
 ---
 name: roast-room
-description: Use when a founder wants a hard business decision debated by a council of world-class operators, says "roast room", "put this in the Roast Room", "founder council", "convene the council", "take this to the board", "what would Hormozi, Bezos, or Buffett say", "should I do X", or can't make up their mind on pricing, hiring, raising money, a new product, a partnership, a pivot, an event, or spending. A board of sub-agents, each built from one expert's public work (Bezos, Paul Graham, Hormozi, Gary Vaynerchuk, Dan Martell, Gino Wickman, and Buffett out of the box, plus any seat added with /newroaster), argue it over three rounds, then a Chair returns a scored verdict, the reasoning, the dissent, and next steps. Also does a one-seat consult ("ask the Hormozi seat"). Not /roast (generic personas, idea validation).
-argument-hint: "[the decision] [--quick] [--all] [--seats hormozi,buffett,...] | ask <seat> [question] | board"
+description: Use when an Indian founder wants a hard business decision debated by a council of Indian operators, says "roast room", "AI India Roast Room", "put this in the Roast Room", "founder council", "convene the council", "take this to the board", "what would Kamath, Kunal Shah, or Uday Kotak say", "should I do X", "kya karu", or can't make up their mind on pricing, hiring, raising money, a new product, a partnership, a pivot, a family-business call, an event, or spending. A board of sub-agents, each built from one Indian expert's public work (Nithin Kamath, Sridhar Vembu, Kunal Shah, Falguni Nayar, Narayana Murthy, Uday Kotak, Aman Gupta, Anupam Mittal, Aadit Palicha, Raj Shamani, Raghuram Rajan, Amitabh Bachchan, plus any seat added with /newroaster), argue it in Hinglish over three rounds, then a Chair returns a scored verdict in rupees, the reasoning, the dissent, and next steps. Also does a one-seat consult ("ask the Kamath seat"). Not /roast (generic personas, idea validation).
+argument-hint: "[the decision] [--quick] [--all] [--english] [--seats kamath,kotak,...] | ask <seat> [question] | board"
 ---
 
 ## What this does
 
-The Roast Room: runs a board meeting on one decision. A board of seats (seven out of the box), one per business pillar, each a sub-agent that reasons and talks the way its expert does, grounded in a brain compiled from that person's videos, essays, letters, talks, and books as they teach them in public. The seats argue across three rounds: open, debate, vote. You act as the **Chair**: you never argue a side, you run the room, keep the score, and write the verdict.
+The AI India Roast Room: runs a board meeting on one decision for an Indian founder. A board of seats (seven on the default board, twelve in the roster), one per business pillar, each a sub-agent that reasons and talks the way its expert does, grounded in a brain compiled from that person's videos, essays, letters, talks, and books as they teach them in public. The seats argue across three rounds: open, debate, vote. You act as the **Chair**: you never argue a side, you run the room, keep the score, and write the verdict.
 
-Read once before the first run: `roster.json` (every seat and the default board), `references/seats.md` (picking the board, weights, tensions), `references/round-prompts.md` (what each seat gets), `references/scoring.md` (math and overrides), `references/report-template.md` (output), `references/live-room.md` (the small JSON files the visual room plays). A finished example council lives in `sessions/2026-10-09-example-take-the-seed/`.
+Read once before the first run: `roster.json` (every seat and the default board), `references/seats.md` (picking the board, weights, tensions), `references/round-prompts.md` (what each seat gets), `references/scoring.md` (math and overrides), `references/report-template.md` (output), `references/live-room.md` (the small JSON files the visual room plays). The format of a finished council is shown by any folder in `sessions/` (older global-edition examples are in `archive/sessions/`).
+
+## India edition: language and money
+
+- **Language: Hinglish by default.** Write everything you say to the founder (questions, brief, Chair notes, draft resolution, verdict, the chat summary) in natural Hinglish: Hindi and English mixed, in Roman script, the way Indian founders talk ("Option B lo, lekin pehle 3 mahine ka cash runway pakka karo"). Keep it plain: short sentences, no shayari, no hype. Every round prompt tells the seats to answer in Hinglish.
+- `--english` on a run switches the whole council (Chair and seats) to plain English.
+- **Never translate inside quotation marks.** Verbatim quotes from a brain stay in their original language with the source id.
+- **Machine fields stay English.** Card field labels (STANCE, OPTION SCORES, RUIN RISK, DOOR, and the rest), verdict labels (GO, GO WITH CONDITIONS, RESHAPE, WAIT, DON'T DO IT), JSON keys, and `## <Seat>` headings stay exactly as specified, because the room and the PDF parse them. The text inside the fields is Hinglish.
+- **Money in rupees.** Use ₹ with the Indian system: ₹50,000, ₹4.5 lakh, ₹2 crore (1 lakh = 1,00,000; 1 crore = 100 lakh). Monthly figures say "per month". When the founder gives dollars, keep them and add the rupee figure in brackets at the current rough rate, marked (assumed rate).
+- **Indian context in the brief.** Ask for or assume, and mark as (assumed): GST registration and whether input credit matters, city tier and target market (metro, Tier-2, Tier-3, Bharat), B2B payment cycles (30 to 90 days is common), family or co-founder ownership, personal guarantees or loans from family, and any licence or regulator involved (RBI, SEBI, FSSAI, and so on).
 
 ## Modes
 
@@ -35,9 +44,10 @@ Who sits at the table comes from `roster.json`, in this order:
 Read the decision, then pick from every seat in `roster.json`:
 
 - Every seat whose pillar the decision lives in or materially affects (the seats that would get weight 2 or 3).
-- One seat that guards the downside (Buffett, or the roster's money, capital, or risk seat), whether or not it is on the default board.
+- One seat that guards the downside (Kotak, or the roster's money, capital, or risk seat), whether or not it is on the default board.
 - The seat most likely to disagree with the rest, so the council argues instead of agreeing.
-- Leave out seats whose pillar barely touches the decision. Two seats with close pillars (Martell and Leila Hormozi on people, Hormozi and Codie Sanchez on deals) sit together only when they would disagree.
+- When the decision touches regulation, licences, interest rates, or a government scheme, seat Rajan.
+- Leave out seats whose pillar barely touches the decision. Two seats with close pillars (Kamath and Vembu on bootstrapping, Aman and Falguni on consumer brands, Aadit and Raj on Gen-Z speed and audience) sit together only when they would disagree.
 - Five to seven seats for a full council, four for `--quick`.
 
 ### Ask
@@ -76,7 +86,7 @@ Keep the brief under 300 words. Mark every assumption as `(assumed)`.
 
 Spawn every seat in **one message**, in parallel, foreground (`run_in_background: false`), `subagent_type: council-<seat>`, with the Round 1 prompt. If a `council-*` type is not registered in this session, use `general-purpose` with the fallback lines from `round-prompts.md`.
 
-When the cards come back, save them verbatim to `round-1.md`, one `## <Seat>` heading per card (the seat's `short` name from `roster.json`: Bezos, Graham, Hormozi, Gary V, and so on), and write the file right away so the room can start playing. Check each card has every field; send a card back once if it is missing scores or a stance. Then add a `## Chair notes` section at the bottom of `round-1.md`:
+When the cards come back, save them verbatim to `round-1.md`, one `## <Seat>` heading per card (the seat's `short` name from `roster.json`: Kamath, Vembu, Kunal, Falguni, and so on), and write the file right away so the room can start playing. Check each card has every field; send a card back once if it is missing scores or a stance. Then add a `## Chair notes` section at the bottom of `round-1.md`:
 
 - The **cruxes**: the one to three underlying disagreements that explain why seats split (a factual question, a numbers question, or a values question such as speed versus safety), with the seats on each side.
 - The **unanimity check** (`scoring.md`): if Round 1 converged, make the strongest unargued alternative a crux and name which seats must argue it at full strength.
@@ -102,13 +112,13 @@ Quick mode skips this round when the Round 2 spread on the top option is 3 or le
 
 1. Run `python .claude/skills/roast-room/scripts/check_quotes.py <session folder>` (try `python3` if `python` is missing). Every quote attributed to a source id must be in a brain. Remove any unverified quote from the verdict (and say so in the Chair notes). If Python is not installed, do not stop or ask the user to install it: check each attributed quote yourself by searching that seat's brain folder for the exact words, and treat any you cannot find as unverified.
 2. Compute the numbers from the last round's cards per `scoring.md`, apply the overrides, and write `verdict.md` from `report-template.md`. Write `verdict.json` last (`live-room.md`); it tells the room the council is over.
-3. Show the user a short verdict in chat, not the full report: the label and the call, the option scores on one line, the three arguments that carried the room (one line each, with the seat), the strongest objection (one line, with the seat), and the next steps (at most three). Then the path to `verdict.md` for the full detail, one line saying the branded PDF is one click away ("Download PDF" on the verdict at http://localhost:4730), and one line offering a follow-up with any seat or a rerun with new facts. Keep it under 200 words: a founder should be able to decide from it at a glance.
+3. Show the user a short verdict in chat, in Hinglish (English with `--english`), not the full report: the label and the call, the option scores on one line, the three arguments that carried the room (one line each, with the seat), the strongest objection (one line, with the seat), and the next steps (at most three). Then the path to `verdict.md` for the full detail, one line saying the branded PDF is one click away ("Download PDF" on the verdict at http://localhost:4730), and one line offering a follow-up with any seat or a rerun with new facts. Keep it under 200 words: a founder should be able to decide from it at a glance.
 
 ## Chair rules
 
 - You never argue a side and never add your own pillar. If no seat raised an important point, put it to the closest seat as a crux in the next round instead of inserting it yourself.
 - Quote seats faithfully. Never put words in a seat's mouth or rewrite a card.
-- Seats speak in their expert's voice; your report is plain English that follows the house writing rules (no em dashes, no AI tells, no tee-ups).
+- Seats speak in their expert's voice; your report is plain Hinglish (plain English with `--english`) that follows the house writing rules (no em dashes, no AI tells, no tee-ups). Rupees in lakh and crore.
 - Treat a unanimous Round 1 as a warning, not a win.
 - Cost: a full council is three sub-agent runs per seat (21 for seven seats), about 1M tokens. Use `--quick` for small calls, and say which mode you used.
 - The seats are simulations built from public work. Never present a seat's line as something the real person said unless it is a verbatim quote with a source id from the brain.

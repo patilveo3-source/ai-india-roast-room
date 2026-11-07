@@ -1,0 +1,35 @@
+{
+  "label": "GO WITH CONDITIONS",
+  "call": "Option C, lekin apne cash se: abhi ₹8 crore mat lo, debt mat lo. ₹15 lakh ka 60-din metro quick commerce test chalao, 6 January 2027 ko band karo, phir data ke saath VC ke paas jao.",
+  "recommended": "C",
+  "why": [
+    { "point": "Metro quick commerce pe data zero hai; 25 se 35% commission aur 8% margin pe pehle retention aur per-order contribution ka number chahiye.", "seat": "Aadit", "framework": "Constrain then attack" },
+    { "point": "₹40 crore ek term sheet pe lagbhag 100x earnings hai; plan miss hua toh down round aur anti-dilution.", "seat": "Mittal", "framework": "Market determines valuation" },
+    { "point": "Debt bilkul nahi: ₹2.5 crore at 15% ka interest poora ₹37.5 lakh profit kha jaata hai.", "seat": "Kotak", "framework": "No excess leverage" },
+    { "point": "Jawab ₹15 lakh mein mil sakta hai, toh ₹8 crore pe 20% dena bina wajah ka risk hai.", "seat": "Kotak", "framework": "Return of capital before return on capital" }
+  ],
+  "minority": { "seat": "Kamath", "quote": "Kotak ka worst case P&L pe bach jaata hai, cap table pe nahi.", "would_have_to_be_true": "Founder ke liye ₹8 se 9 crore pe profitable aur debt-free rehna 3 saal ke ₹15 crore target se zyada maayne rakhta ho." },
+  "next_steps": [
+    { "when": "Is hafte", "action": "VC se 60 din ka hold maango aur family ko loan ka likhit schedule do (₹2.8 lakh per month, January 2027 se)." },
+    { "when": "Is hafte", "action": "Top 5 SKUs ka quick commerce unit economics likho, phir 15 dark stores aur top Tier-2 city mein listing live karo." },
+    { "when": "6 January 2027", "action": "Test band, numbers dekho: pass toh 2 term sheets ke saath raise, fail toh B." }
+  ],
+  "kill_criteria": "Week-six repeat 10% se neeche, per-order contribution negative, ya bank ₹25 lakh se neeche: test band, VC ko no, B pe wapas.",
+  "conditions": [
+    "Metro test ₹15 lakh pe capped",
+    "Test 6 January 2027 ko band",
+    "Bank mein kabhi ₹25 lakh se kam nahi",
+    "Koi naya debt nahi",
+    "Family loan schedule is hafte, January 2027 se ₹2.8 lakh per month",
+    "Raise sirf 25%+ repeat, positive contribution, 2 term sheets, 1x non-participating aur family loan mein VC ka paisa zero ke saath"
+  ],
+  "fights": [
+    { "crux": "Metro test ka paisa: debt, equity, ya apna cash?", "story": "Mittal debt, Kotak equity, Kamath aur Aadit apna cash. Kotak ke interest math ne Mittal ko hataya, Aadit ke chhote test aur Mittal ke family-loan point ne Kotak ko hataya. Chaaron apne cash pe aaye." },
+    { "crux": "₹40 crore trap ya mauka?", "story": "Kamath aur Mittal ne trap kaha. Kotak ne pehle ring-fence ke saath haan kaha, phir family loan wala flaw maana. Aaj trap, data ke baad mauka ho sakta hai." },
+    { "crux": "Pehle data ya abhi decision?", "story": "Kotak aur Mittal pehle abhi decide karna chahte the; Round 2 mein Mittal, Kotak aur Aadit ne kaha VC 60 din ruk nahi sakta toh jaane do." }
+  ],
+  "amendments": [],
+  "cheapest_test": "₹15 lakh, 60 din, 15 dark stores plus top Tier-2 city; week-six repeat aur per-order contribution track karo.",
+  "revisit": "6 January 2027: repeat rate, per-order contribution, cash balance, aur term sheets ki ginti ke saath.",
+  "override_note": "Quick mode: Round 3 skip, kyunki C pe spread 1 tha aur kisi seat pe ruin risk likely nahi."
+}

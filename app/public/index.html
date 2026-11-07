@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Roast Room · AI Automation Society</title>
-  <link rel="icon" href="/brand/favicon-ais.png" type="image/png">
+  <title>AI India Roast Room</title>
+  <link rel="icon" href="/brand/favicon-aii.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
   <header class="topbar">
     <div class="brand">
-      <img class="brand-logo" src="/brand/ais-horizontal.svg" alt="AI Automation Society">
+      <img class="brand-logo" src="/brand/aii-horizontal.svg" alt="AI India">
       <span class="brand-rule" aria-hidden="true"></span>
       <span class="brand-name">Roast Room</span>
     </div>
@@ -47,22 +47,22 @@
         <div class="wall" aria-hidden="true"></div>
         <div class="spot" id="spot" aria-hidden="true"></div>
         <div id="seats"></div>
-        <div class="table" id="table" aria-hidden="true"><img class="etch" src="/brand/ais-symbol.png" alt=""></div>
+        <div class="table" id="table" aria-hidden="true"><img class="etch" src="/brand/aii-symbol.png" alt=""></div>
         <div id="plates"></div>
         <svg class="links" id="links" aria-hidden="true"></svg>
 
         <div class="center" id="center">
           <div class="waiting" id="waiting" hidden>
             <span class="pulse"><i></i>The room is open</span>
-            <h2 data-type>Bring a decision to the Roast Room</h2>
-            <p>In Claude Code, type the line below with your decision. The council shows up here and argues it out live.</p>
-            <code>/roast-room should I ...</code>
+            <h2 data-type>Apna decision Roast Room mein laao</h2>
+            <p>Claude Code mein neeche wali line apne decision ke saath type karo. Council yahan aakar live behas karegi.</p>
+            <code>/roast-room kya mujhe ... karna chahiye?</code>
             <div class="row"><button class="ghost" type="button" id="waitGuide">What to put in your question</button><button class="ghost" type="button" id="waitHistory">Watch a past council</button></div>
           </div>
 
           <form class="composer" id="composer" hidden>
-            <h2 data-type>What decision do you need help with?</h2>
-            <textarea id="prompt" rows="3" placeholder="Give them the decision, your options, a few numbers (revenue, cash, team), and which way you're leaning." required minlength="10"></textarea>
+            <h2 data-type>Kis decision mein help chahiye?</h2>
+            <textarea id="prompt" rows="3" placeholder="Decision, aapke options, kuch numbers (revenue in ₹, cash, team) aur aap kis taraf jhuk rahe ho, sab likho." required minlength="10"></textarea>
             <div class="samples" id="samples"></div>
             <div class="composer-row">
               <div class="mode" role="radiogroup" aria-label="Council size">
@@ -138,7 +138,7 @@
   </dialog>
 
   <div class="toast" id="toast" hidden></div>
-  <p class="disclaimer">Simulated advisors built from each person's public work and drawn as caricatures. They are not the people and do not speak for them.</p>
+  <p class="disclaimer">Simulated advisors, har vyakti ke public kaam se bane. Ye asli log nahi hain aur unki taraf se nahi bolte. Simulated advisors built from public work; they are not the people and do not speak for them.</p>
 
   <script src="/app.js" type="module"></script>
 </body>

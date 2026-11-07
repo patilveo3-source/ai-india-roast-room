@@ -1,6 +1,6 @@
 # Live room files
 
-The Roast Room (a local web app on http://localhost:4730) watches the sessions folder and plays a council as its files appear: portraits talk one at a time, rebuttal arrows fly, votes land, and the verdict comes up. It reads the round files you already write, plus four small JSON files. Write each one at the moment listed, as plain JSON (no comments, no trailing commas). Seat names can be keys (`garyvee`) or display names (`Gary V`).
+The Roast Room (a local web app on http://localhost:4730) watches the sessions folder and plays a council as its files appear: portraits talk one at a time, rebuttal arrows fly, votes land, and the verdict comes up. It reads the round files you already write, plus four small JSON files. Write each one at the moment listed, as plain JSON (no comments, no trailing commas). Seat names can be keys (`kamath`) or display names (`Kamath`).
 
 The room is optional. Write these files anyway; they cost a few lines and the council runs the same without the room.
 
@@ -20,19 +20,19 @@ The room is optional. Write these files anyway; they cost a few lines and the co
 
 ```json
 {
-  "title": "Raise coaching price to $3,500",
-  "decision": "Raise the price from $2,000 to $3,500, and for whom.",
+  "title": "Raise coaching fee to ₹35,000",
+  "decision": "Raise the price from ₹20,000 to ₹35,000, and for whom.",
   "mode": "full",
   "options": [
-    { "id": "A", "label": "Raise to $3,500 for everyone now" },
+    { "id": "A", "label": "Raise to ₹35,000 for everyone now" },
     { "id": "B", "label": "Raise for new clients only" },
-    { "id": "C", "label": "Keep $2,000" }
+    { "id": "C", "label": "Keep ₹20,000" }
   ],
   "weights": {
-    "hormozi": { "weight": 3, "reason": "Pricing is his pillar" },
-    "buffett": { "weight": 2, "reason": "Cash risk of losing clients" }
+    "aman": { "weight": 3, "reason": "Pricing and brand is his pillar" },
+    "kotak": { "weight": 2, "reason": "Cash risk of losing clients" }
   },
-  "seats": ["bezos", "graham", "hormozi", "garyvee", "martell", "wickman", "buffett"],
+  "seats": ["kamath", "vembu", "kunal", "nayar", "murthy", "kotak", "aman"],
   "brief": "Two or three sentences.",
   "assumptions": ["Close rate holds at 50% (assumed)"]
 }
@@ -48,8 +48,8 @@ The room is optional. Write these files anyway; they cost a few lines and the co
     {
       "question": "Is customer cash enough to fund the next two hires?",
       "sides": [
-        { "position": "Yes, prepay covers it", "seats": ["Hormozi", "Martell"] },
-        { "position": "No, prepay is pulled-forward revenue", "seats": ["Graham", "Bezos"] }
+        { "position": "Yes, prepay covers it", "seats": ["Aman", "Kamath"] },
+        { "position": "No, prepay is pulled-forward revenue", "seats": ["Vembu", "Kotak"] }
       ]
     }
   ],
@@ -82,14 +82,14 @@ One to three cruxes. Questions under 90 characters, positions under 50.
   "call": "One or two sentences the founder can act on, naming the option.",
   "recommended": "B",
   "why": [
-    { "point": "One line.", "seat": "Graham", "framework": "Startup = Growth" }
+    { "point": "One line.", "seat": "Vembu", "framework": "Startup = Growth" }
   ],
-  "minority": { "seat": "Martell", "quote": "The seat's own words, copied from a card.", "would_have_to_be_true": "One line." },
+  "minority": { "seat": "Kamath", "quote": "The seat's own words, copied from a card.", "would_have_to_be_true": "One line." },
   "next_steps": [ { "when": "This week", "action": "One line." } ],
   "kill_criteria": "One line.",
   "conditions": ["Checkable condition"],
   "fights": [ { "crux": "The question", "story": "Who was on each side, who moved, how it resolved." } ],
-  "amendments": [ { "seat": "Buffett", "amendment": "One line.", "adopted": true, "reason": "One line." } ],
+  "amendments": [ { "seat": "Kotak", "amendment": "One line.", "adopted": true, "reason": "One line." } ],
   "cheapest_test": "One line.",
   "revisit": "When and with what numbers.",
   "override_note": ""

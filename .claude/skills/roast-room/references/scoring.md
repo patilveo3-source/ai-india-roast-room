@@ -31,7 +31,7 @@ Round 3's FINAL SCORE is each seat's support for the draft resolution as written
 ## Overrides (applied after the band, and stated in the report)
 
 1. **Ruin cap.** Any seat that ends at `RUIN RISK: likely` on the recommended option caps the verdict at RESHAPE until the resolution names a mitigation that seat endorsed. One seat at ruin risk outweighs six enthusiastic seats.
-2. **One-way door cap.** If the recommended option is a one-way door (Bezos's call, or a majority of seats) and the spread on it is 4 or more, cap at GO WITH CONDITIONS and make the cheapest test a precondition.
+2. **One-way door cap.** If the recommended option is a one-way door (a majority of seats, or the downside seat Kotak) and the spread on it is 4 or more, cap at GO WITH CONDITIONS and make the cheapest test a precondition.
 3. **Unanimity check.** If every seat's top option is the same and their scores for it sit within 1 point in Round 1, the Chair names the strongest unargued alternative as a crux in Round 2 and asks the seats whose pillars are most at risk to argue it at full strength.
 
 ## Spread and confidence
@@ -44,14 +44,4 @@ Round 3's FINAL SCORE is each seat's support for the draft resolution as written
 
 One column per seat: its final PILLAR SCORE, which is that seat's judgment of the recommended option on its own pillar alone. Any pillar at 4 or below gets a named fix in "What to do next", even when the verdict is GO.
 
-Each seat's dimension label is its `dimension` field in `roster.json`. The seven that ship:
-
-| Pillar | Dimension label |
-|---|---|
-| Strategy and decisions (Bezos) | Strategic fit and reversibility |
-| Product and startups (Graham) | Real demand and growth |
-| Offers, pricing, and sales (Hormozi) | Offer strength and unit economics |
-| Marketing and attention (Gary V) | Attention and distribution |
-| People, hiring, and founder time (Martell) | Team capacity and founder time |
-| Operations and scaling (Wickman) | Operational readiness |
-| Money and capital (Buffett) | Downside and capital efficiency |
+Each seat's dimension label is its `dimension` field in `roster.json`.

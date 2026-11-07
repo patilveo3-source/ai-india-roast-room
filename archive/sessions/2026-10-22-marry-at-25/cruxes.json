@@ -1,0 +1,26 @@
+{
+  "cruxes": [
+    {
+      "question": "Does a small cash wedding in ~6 months, after the talks, beat a long engagement?",
+      "sides": [
+        { "position": "Engage now, marry in 12 to 18 months", "seats": ["Buffett", "Leila"] },
+        { "position": "Must argue marry-soon at full strength", "seats": ["Bezos", "Hormozi"] }
+      ]
+    },
+    {
+      "question": "Do the checks need 12 to 18 months, or can they be done in 3?",
+      "sides": [
+        { "position": "Need a lived track record", "seats": ["Buffett", "Leila"] },
+        { "position": "Talks plus numbers are enough", "seats": ["Bezos", "Hormozi"] }
+      ]
+    },
+    {
+      "question": "What rule stops an engagement from pushing past a red flag?",
+      "sides": [
+        { "position": "All four name it as the main risk", "seats": ["Buffett", "Bezos", "Leila", "Hormozi"] }
+      ]
+    }
+  ],
+  "unanimous": true,
+  "note": "All four back a long engagement; the founder's own lean to marry now has not been argued at full strength yet."
+}

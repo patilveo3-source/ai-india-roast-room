@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 80" role="img" aria-label="AI India">
+  <circle cx="40" cy="40" r="32" fill="#FF7A1A"/>
+  <text x="40" y="47" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="27" fill="#fff">AI</text>
+  <rect x="28.5" y="56" width="23" height="3.5" rx="1.75" fill="#138808"/>
+  <text x="86" y="52" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="34" fill="#fff">AI India</text>
+</svg>

@@ -13,8 +13,8 @@ export const MODELS = {
 // The board comes from the roster: the saved default board, or every seat it lists.
 const chairSystem = (st) => {
   const seats = st.board.map((k) => byKey[k]);
-  return `You are the Chair of a Roast Room council: ${seats.length} simulated advisors built from the public work of ${seats.map((x) => `${x.name} (${x.pillar.toLowerCase()})`).join(", ")}.
-You never argue a side and never add your own pillar. You run the room, keep score, and write in plain English: short sentences, no em dashes, no hype, no tee-ups like "here's the thing", no filler. Seat keys (for key fields only): ${seats.map((x) => x.key).join(", ")}. Whenever you write a seat's name in prose or in a seat field, use its display name: ${seats.map((x) => x.short).join(", ")}.`;
+  return `You are the Chair of an AI India Roast Room council for an Indian founder: ${seats.length} simulated advisors built from the public work of ${seats.map((x) => `${x.name} (${x.pillar.toLowerCase()})`).join(", ")}.
+You never argue a side and never add your own pillar. You run the room, keep score, and write in plain Hinglish (Hindi and English mixed, Roman script): short sentences, money in ₹ with lakh and crore, field labels and verdict labels kept in English, no em dashes, no hype, no tee-ups like "here's the thing", no filler. Seat keys (for key fields only): ${seats.map((x) => x.key).join(", ")}. Whenever you write a seat's name in prose or in a seat field, use its display name: ${seats.map((x) => x.short).join(", ")}.`;
 };
 
 export const DISCLAIMER = "Simulated advisors built from each person's public work. They are not the people and do not speak for them.";
@@ -463,7 +463,7 @@ function verdictMarkdown(st) {
   const v = st.verdict;
   const opt = (id) => st.options.find((o) => o.id === id)?.label || id;
   const L = [];
-  L.push(`# Roast Room: ${st.title}`, "", `${new Date().toISOString().slice(0, 10)} · Seats: ${st.seats.map((k) => byKey[k].short).join(", ")} · Rounds: ${st.rounds.length} · Mode: ${st.mode}`, "");
+  L.push(`# AI India Roast Room: ${st.title}`, "", `${new Date().toISOString().slice(0, 10)} · Seats: ${st.seats.map((k) => byKey[k].short).join(", ")} · Rounds: ${st.rounds.length} · Mode: ${st.mode}`, "");
   L.push(`## Verdict: ${v.label} (Option ${v.recommended}: ${opt(v.recommended)})`, "", `**The call:** ${v.call}`, "");
   L.push(`Option scores: ${st.options.map((o) => `${o.id} ${v.scores[o.id]?.score ?? "-"}`).join(" · ")}${v.support != null ? ` · Support for the resolution ${v.support}/10` : ""} · Confidence ${v.confidence ?? "-"}/10 · Spread ${v.spread}`);
   if (v.override_note) L.push("", v.override_note);

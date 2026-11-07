@@ -69,7 +69,7 @@ function normalizeSetup(c) {
   const seats = (c.seats || []).map(seatKey).filter(Boolean);
   const mode = c.mode === "quick" ? "quick" : "full";
   return {
-    title: c.title || "Roast Room", decision: c.decision || "", brief: c.brief || "", mode,
+    title: c.title || "AI India Roast Room", decision: c.decision || "", brief: c.brief || "", mode,
     options, assumptions: c.assumptions || [], weights,
     seats: seats.length ? [...new Set(seats)] : defaultBoard(),
   };

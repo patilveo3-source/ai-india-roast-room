@@ -42,15 +42,20 @@ const clean = (t) => String(t ?? "").replace(/\s*\((?:S\d+|source[^)]*)[^)]*\)/g
 const dateLine = (id) => {
   const m = String(id || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
   const d = m ? new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3])) : new Date();
-  return d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  return d.toLocaleDateString("en-IN", { month: "long", day: "numeric", year: "numeric" });
 };
 
 export async function downloadVerdictPdf({ setup, verdict: ev, byKey, id }) {
   await loadLib();
   const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ unit: "pt", format: "letter", compress: true });
+  const doc = new jsPDF({ unit: "pt", format: "a4", compress: true });
+  // The bundled Montserrat has no ₹ glyph, so write rupees as "Rs" wherever text is measured or drawn.
+  const rs = (t) => (typeof t === "string" ? t.replace(/₹\s?/g, "Rs ") : Array.isArray(t) ? t.map(rs) : t);
+  const [rawText, rawSplit] = [doc.text.bind(doc), doc.splitTextToSize.bind(doc)];
+  doc.text = (t, ...a) => rawText(rs(t), ...a);
+  doc.splitTextToSize = (t, ...a) => rawSplit(rs(t), ...a);
   await addFonts(doc);
-  const logo = "data:image/png;base64," + (await fetchBase64("/brand/ais-horizontal-on-light.png"));
+  const logo = "data:image/png;base64," + (await fetchBase64("/brand/aii-horizontal-on-light.png"));
 
   const v = ev.verdict;
   const seats = ev.seats || [];
@@ -61,7 +66,7 @@ export async function downloadVerdictPdf({ setup, verdict: ev, byKey, id }) {
   };
   const who = (x) => byKey[seatKey(x)]?.name || x || "";
 
-  const W = 612, H = 792, M = 54, CW = W - M * 2;
+  const W = 595.28, H = 841.89, M = 54, CW = W - M * 2;
   let y = M;
 
   const font = (size, style = "normal", color = C.ink) => { doc.setFont("Montserrat", style); doc.setFontSize(size); doc.setTextColor(...color); };
@@ -115,7 +120,7 @@ export async function downloadVerdictPdf({ setup, verdict: ev, byKey, id }) {
 
   // ---------------------------------------------------------------- header
   doc.addImage(logo, "PNG", M, y, 62, 62 * 374 / 900, "ais-logo", "SLOW");
-  font(15, "bold", C.ink); doc.text("Roast Room", W - M, y + 12, { align: "right" });
+  font(15, "bold", C.ink); doc.text("AI India Roast Room", W - M, y + 12, { align: "right" });
   font(8.5, "normal", C.mute); doc.text(`Verdict report · ${dateLine(id)}`, W - M, y + 25, { align: "right" });
   y += 40;
   doc.setDrawColor(...C.ink); doc.setLineWidth(1.2); doc.line(M, y, W - M, y);
@@ -218,14 +223,14 @@ export async function downloadVerdictPdf({ setup, verdict: ev, byKey, id }) {
     doc.setPage(p);
     doc.setDrawColor(...C.rule); doc.setLineWidth(0.75); doc.line(M, H - 46, W - M, H - 46);
     font(7.5, "semibold", C.mute);
-    const tag = `Roast Room by AI Automation Society · ${p} of ${pages}`;
+    const tag = `AI India Roast Room · ${p} of ${pages}`;
     const tagW = doc.getTextWidth(tag);
     doc.text(tag, W - M, H - 34, { align: "right" });
     font(7.5, "normal", C.mute);
     doc.text(doc.splitTextToSize(v.disclaimer || "Simulated advisors built from each person's public work. They are not the people and do not speak for them.", CW - tagW - 24), M, H - 34, { lineHeightFactor: 1.35 });
   }
 
-  const name = `Roast Room - ${String(setup.title || id || "verdict").replace(/[\\/:*?"<>|]+/g, "").slice(0, 80)}.pdf`;
+  const name = `AI India Roast Room - ${String(setup.title || id || "verdict").replace(/[\\/:*?"<>|]+/g, "").slice(0, 80)}.pdf`;
   doc.save(name);
   return name;
 }

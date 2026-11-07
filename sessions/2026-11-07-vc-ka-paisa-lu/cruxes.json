@@ -1,0 +1,28 @@
+{
+  "cruxes": [
+    {
+      "question": "Metro test ka paisa: debt, equity, ya apna cash?",
+      "sides": [
+        { "position": "Revenue-based debt, equity last", "seats": ["Mittal"] },
+        { "position": "Equity, debt bilkul nahi", "seats": ["Kotak"] },
+        { "position": "Apne cash se chhota test", "seats": ["Kamath", "Aadit"] }
+      ]
+    },
+    {
+      "question": "₹40 crore valuation trap hai ya mauka?",
+      "sides": [
+        { "position": "Trap: 100x earnings, ek term sheet", "seats": ["Kamath", "Mittal"] },
+        { "position": "Mauka, ring-fence aur burn cap ke saath", "seats": ["Kotak"] }
+      ]
+    },
+    {
+      "question": "Pehle 60 din ka metro data, phir decision?",
+      "sides": [
+        { "position": "Haan, repeat aur contribution pehle", "seats": ["Aadit", "Kamath"] },
+        { "position": "Abhi decide karo", "seats": ["Kotak", "Mittal"] }
+      ]
+    }
+  ],
+  "unanimous": false,
+  "note": "Room ka jhagda paise ke source pe hai: debt, equity, ya apna cash, aur kya pehle metro ka data aana chahiye."
+}

@@ -1,0 +1,19 @@
+{
+  "title": "VC ka paisa lu ya bootstrapped rahu?",
+  "decision": "Profitable D2C snacks brand: ₹8 crore VC lekar metros aur quick commerce, ya bootstrapped Tier-2 growth?",
+  "mode": "quick",
+  "options": [
+    { "id": "A", "label": "₹8 crore lo, quick commerce + metros" },
+    { "id": "B", "label": "Bootstrapped, Tier-2 mein grow" },
+    { "id": "C", "label": "Chhota round, 2 metros mein test" }
+  ],
+  "weights": {
+    "kamath": { "weight": 3, "reason": "Bootstrap vs VC unka pillar hai" },
+    "mittal": { "weight": 3, "reason": "Deal terms aur valuation" },
+    "kotak": { "weight": 2, "reason": "Family loan aur worst case" },
+    "palicha": { "weight": 2, "reason": "Quick commerce speed ka case" }
+  },
+  "seats": ["kamath", "mittal", "kotak", "palicha"],
+  "brief": "₹40 lakh per month ka profitable D2C snacks brand, 70% Tier-2 sales, family ka ₹50 lakh loan. VC ₹8 crore offer kar raha hai ₹40 crore valuation pe. Paisa lekar metros aur quick commerce, ya bootstrapped Tier-2 growth, ya beech ka raasta.",
+  "assumptions": ["Net margin around 8% (assumed)", "Team 15 log (assumed)", "Quick commerce commission 25 se 35% (assumed)", "Family loan ki fixed date nahi (assumed)"]
+}

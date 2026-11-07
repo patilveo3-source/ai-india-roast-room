@@ -1,6 +1,6 @@
 # Report template (the Chair's verdict)
 
-Written by the Chair in plain English. No em dashes. No AI filler: state each point once, no tee-ups, no "here's the thing". Seat quotes keep their own voice. Keep the whole report under about 1,000 words; the round files hold the detail. Reference report: `sessions/2026-10-09-example-take-the-seed/verdict.md`.
+Written by the Chair in plain Hinglish (Roman script; plain English with `--english`), money in ₹ lakh and crore. Section headings and verdict labels stay in English so the room and the PDF can read them. No em dashes. No AI filler: state each point once, no tee-ups, no "here's the thing". Seat quotes keep their own voice. Keep the whole report under about 1,000 words; the round files hold the detail. Reference report (global edition, English): `archive/sessions/2026-10-09-example-take-the-seed/verdict.md`.
 
 ```markdown
 # Roast Room: [decision in a few words]
@@ -18,13 +18,13 @@ Option scores: [A] x.x · [B] x.x · [C] x.x · Support for the resolution x.x/1
 
 | Seat | Weight | Final stance | [A] | [B] | [C] | Pillar score | Moved? | Their line |
 |---|---|---|---|---|---|---|---|---|
-| Buffett (money) | 3 | ... | 1 | 6 | 7 | 8 | gated B to C default | "[their one line for the founder]" |
+| Kotak (capital) | 3 | ... | 1 | 6 | 7 | 8 | gated B to C default | "[their one line for the founder]" |
 
 Math: [one line per option]
 
 ## Why the council landed here
 
-[3 to 5 bullets: the arguments that carried the room, each tagged with the seat and framework, e.g. (Hormozi, Value Equation)]
+[3 to 5 bullets: the arguments that carried the room, each tagged with the seat and framework, e.g. (Kamath, no outside money)]
 
 ## Where they fought
 

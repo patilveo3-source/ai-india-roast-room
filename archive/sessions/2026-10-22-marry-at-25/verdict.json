@@ -1,0 +1,34 @@
+{
+  "label": "GO",
+  "call": "Option B: get engaged now and marry in 9 to 12 months, once the talks are written, one shared budget has held for six months, and the wedding fits under $10K cash.",
+  "recommended": "B",
+  "why": [
+    { "point": "Engagement commits to the person now; marriage, the one-way door, waits for the checks.", "seat": "Bezos", "framework": "Type 1 and Type 2 decisions" },
+    { "point": "Talks show plans; only months on a shared budget show behavior in a bad month.", "seat": "Buffett", "framework": "Demonstrated earning power" },
+    { "point": "A small cash wedding with six months of reserves removes the money risk.", "seat": "Hormozi", "framework": "Cash only" },
+    { "point": "Waiting two to three years adds time but no information.", "seat": "Leila", "framework": "Power of a decision" }
+  ],
+  "minority": { "seat": "Hormozi", "quote": "A small cash wedding at month 6 is as good as B if the gate passes.", "would_have_to_be_true": "Three straight months on one budget within 10% of plan, full balance sheets shared, and one hard month already handled well." },
+  "next_steps": [
+    { "when": "This week", "action": "Swap full balance sheets and each write three deal-breakers." },
+    { "when": "By 2027-01-22", "action": "Four talks (money, kids, city, careers) written and signed; shared budget running since 2026-11-01." },
+    { "when": "May 2027", "action": "After six budget months, lock a date for July to October 2027." }
+  ],
+  "kill_criteria": "A deal-breaker unresolved in 90 days, or the budget missed 3 of 6 months: stop and book nothing.",
+  "conditions": [
+    "Balance sheets swapped by 2026-11-15",
+    "Four talks written and signed by 2027-01-22",
+    "Six months on one shared budget, kept 5 of 6, no new debt",
+    "One real disagreement settled and holding 60 days later",
+    "Wedding at or under $10K cash, 6 months of expenses left after"
+  ],
+  "fights": [
+    { "crux": "Marry in about 6 months, or engage now and marry later?", "story": "Round 1 was unanimous for 12 to 18 months. Bezos and Hormozi argued marrying soon at full strength, then conceded three months is too small a sample. Everyone shortened B to 9 to 12 months; A rose to 5.9 but stayed behind." },
+    { "crux": "Talks or lived record?", "story": "Both. Talks settle facts in 3 months; about 6 months on one budget shows behavior. Hormozi wanted 3 budget months, the rest 6; the Chair picked 6." },
+    { "crux": "What stops an engagement pushing past a red flag?", "story": "All four proposed the same rule: no nonrefundable deposit until checks pass, and a red flag moves the date automatically." }
+  ],
+  "amendments": [],
+  "cheapest_test": "Each writes one page on money, kids, city, and careers in ten years; swap and read before talking.",
+  "revisit": "May 2027, with six months of budget results, the signed one-pagers, and the wedding budget.",
+  "override_note": "Quick mode: Round 3 skipped because the spread on B was 0 and no seat was at ruin risk likely."
+}

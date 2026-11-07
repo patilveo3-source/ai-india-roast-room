@@ -1,6 +1,10 @@
 # Round prompts
 
-Paste these into each seat's Agent call. Replace the bracketed parts. Seats read the brief and earlier rounds from the session folder, so the cards stay verbatim without being pasted into every prompt.
+Paste these into each seat's Agent call. Replace the bracketed parts.
+
+India edition: every prompt carries a LANGUAGE line. Leave it as is for Hinglish; with `--english`, replace it with "LANGUAGE: plain English. Money in rupees with lakh and crore."
+
+Seats read the brief and earlier rounds from the session folder, so the cards stay verbatim without being pasted into every prompt.
 
 Agent type: `council-<seat>`. If that type is not registered in this session (agent files load at session start), spawn `general-purpose` and put these lines first: `Read .claude/agents/council-<seat>.md and follow it as your instructions for this whole task. Only read files; do not write anything.`
 
@@ -18,6 +22,8 @@ Paths in prompts are relative to the repo root; give the absolute repo root once
 ROAST ROOM COUNCIL, ROUND 1 OF 3: OPENING POSITION
 
 Repo root: [absolute path]. You hold the [SEAT] seat ([pillar]). Read your brain's _hot.md, then at most three more brain files that fit this decision (frameworks.md and positions.md are usually the right ones).
+
+LANGUAGE: answer in natural Hinglish (Hindi and English mixed, Roman script), the way Indian founders talk. [With --english: plain English.] Keep every field label below exactly as written, in English. Money in rupees with lakh and crore. Quotes from your brain stay verbatim in their original language.
 
 Read the brief: [session folder]/brief.md
 
@@ -55,6 +61,8 @@ ROAST ROOM COUNCIL, ROUND 2 OF 3: DEBATE
 
 Repo root: [absolute path]. You hold the [SEAT] seat. Read your brain's _hot.md again and any brain file you need to answer the others (at most three).
 
+LANGUAGE: answer in natural Hinglish (Hindi and English mixed, Roman script), the way Indian founders talk. [With --english: plain English.] Keep every field label below exactly as written, in English. Money in rupees with lakh and crore. Quotes from your brain stay verbatim in their original language.
+
 Read: [session folder]/brief.md and [session folder]/round-1.md (every seat's card and the Chair's cruxes).
 
 THE CRUXES THE CHAIR SEES
@@ -87,6 +95,8 @@ ROAST ROOM COUNCIL, ROUND 3 OF 3: VOTE ON THE DRAFT RESOLUTION
 
 Repo root: [absolute path]. You hold the [SEAT] seat. You already argued this in two rounds; read only your _hot.md if you need it.
 
+LANGUAGE: answer in natural Hinglish (Hindi and English mixed, Roman script), the way Indian founders talk. [With --english: plain English.] Keep every field label below exactly as written, in English. Money in rupees with lakh and crore. Quotes from your brain stay verbatim in their original language.
+
 Read: [session folder]/brief.md, your own section of [session folder]/round-2.md, and [session folder]/draft-resolution.md.
 
 Answer in your seat's voice, under 150 words, in exactly this shape:
@@ -108,6 +118,8 @@ ONE LINE FOR THE FOUNDER: the thing from your pillar they must not forget.
 ROAST ROOM COUNCIL, SINGLE-SEAT CONSULT
 
 Repo root: [absolute path]. You hold the [SEAT] seat. Read your brain's _hot.md, then at most four more brain files that fit the question.
+
+LANGUAGE: answer in natural Hinglish (Hindi and English mixed, Roman script), the way Indian founders talk. [With --english: plain English.] Keep every field label below exactly as written, in English. Money in rupees with lakh and crore. Quotes from your brain stay verbatim in their original language.
 
 THE QUESTION
 [question, plus any context]
