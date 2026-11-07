@@ -103,3 +103,4 @@ Claude finds the person's public work, fetches it into `build/` (git ignores it)
 These are simulations built from each person's public work. They are not the people, they don't speak for them, and none of them is affiliated with or endorses this project. A seat only quotes a person verbatim when the line is in its brain with a source id, and `python .claude/skills/roast-room/scripts/check_quotes.py sessions/<session>` checks every quote in a council against the brains. Most brains are built from auto-generated YouTube captions, so quotes keep the captions' spelling. Each brain's `sources.md` lists what it was built from.
 
 Based on the Roast Room by AI Automation Society. The code is MIT licensed; see `LICENSE`. The PDF builder bundles [jsPDF](https://github.com/parallax/jsPDF) (MIT) and [Montserrat](https://github.com/JulietaUla/Montserrat) (SIL Open Font License); their licenses sit next to them in `app/public/`.
+"# ai-india-roast-room" 
